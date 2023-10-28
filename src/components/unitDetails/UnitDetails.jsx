@@ -34,16 +34,16 @@ const UnitDetails = () => {
   //   );
   // }
 
-  // const handleNextUnit = () => {
-  //   const currentUnitIndex = nextUnitId.findIndex(
-  //     (d) => d.id === parseInt(id, 10)
-  //   );
-  //   if (currentUnitIndex !== -1 && currentUnitIndex < nextUnitId.length - 1) {
-  //     const nextUnit = nextUnitId[currentUnitIndex + 1];
-  //     // navigate(`/unit_details/${nextUnit.id}`);
-  //     console.log(nextUnit);
-  //   }
-  // };
+  const handleNextUnit = () => {
+    const currentUnitIndex = nextUnitId.findIndex(
+      (d) => d.id === parseInt(id, 10)
+    );
+    if (currentUnitIndex !== -1 && currentUnitIndex < nextUnitId.length - 1) {
+      const nextUnit = nextUnitId[currentUnitIndex + 1];
+      // navigate(`/unit_details/${nextUnit.id}`);
+      console.log(nextUnit);
+    }
+  };
 
   return (
     <div className="container-fluid">
