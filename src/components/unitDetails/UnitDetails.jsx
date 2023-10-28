@@ -1,62 +1,47 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
-// import axios from 'axios';
 import { FaCaretLeft } from 'react-icons/fa6';
-import { CircularProgressbarWithChildren } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
-// import NavBar from '../navbar/Navbar';
+import img from './1.png';
 
 const UnitDetails = () => {
-  const API_BASE_URL = '../public/FakeData.json';
-  console.log(API_BASE_URL);
-  const { id } = useParams();
-  // const navigate = useNavigate();
+  const API_BASE_URL = 'http://localhost:3000/units';
   const [unit, setUnit] = useState(null);
-  const [nextUnitId, setNextUnitId] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  console.log(unit.name);
+
+  const fetchData = async (url) => {
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+      setUnit(data);
+    } catch (error) {
+      setError(error);
+    }
+  };
 
   useEffect(() => {
-    // axios.get(`${API_BASE_URL}/units/${id}`)
-    fetch(API_BASE_URL)
-      .then((unitResponse) => {
-        setUnit(unitResponse);
-        const units = unitResponse.json();
-        console.log(units);
-        setNextUnitId(units);
-        setLoading(false);
-      })
-      .catch((error) => {
-        setError(`Failed to fetch unit details.${error}`);
-        setLoading(false);
-      });
-  }, [id]);
-  if (loading) {
-    return (
-      <div style={{ width: 200, height: 200 }}>
-        loading...
-      </div>
-    );
-  }
-
+    // fetchData(`${API_BASE_URL}/${id}`);
+    fetchData(`${API_BASE_URL}/1`);
+  }, []);
   if (error) {
     return (
       <div>
         Error:
-        {' '}
         {error}
       </div>
     );
   }
 
-  const handleNextUnit = () => {
-    const currentUnitIndex = nextUnitId.findIndex((d) => d.id === parseInt(id, 10));
-    if (currentUnitIndex !== -1 && currentUnitIndex < nextUnitId.length - 1) {
-      const nextUnit = nextUnitId[currentUnitIndex + 1];
-      // navigate(`/unit_details/${nextUnit.id}`);
-      console.log(nextUnit);
-    }
-  };
+  // const handleNextUnit = () => {
+  //   const currentUnitIndex = nextUnitId.findIndex(
+  //     (d) => d.id === parseInt(id, 10)
+  //   );
+  //   if (currentUnitIndex !== -1 && currentUnitIndex < nextUnitId.length - 1) {
+  //     const nextUnit = nextUnitId[currentUnitIndex + 1];
+  //     // navigate(`/unit_details/${nextUnit.id}`);
+  //     console.log(nextUnit);
+  //   }
+  // };
 
   return (
     <div className="container-fluid">
@@ -66,11 +51,15 @@ const UnitDetails = () => {
         </div>
         <div className="col-lg-6 col-md-6 col-12 d-flex flex-column mx-0 px-0 text-center doctor_details_bg">
           <div>
-            <img src={unit.image} alt={unit.name} className="img-fluid rounded-circle" />
-            <h2>{unit.name}</h2>
-            <p>{unit.description}</p>
+            <img src={img} alt=" name" className="img-fluid rounded-circle" />
+            <h2> Unit Description</h2>
+            {/* <p>{unit.name}</p> */}
           </div>
-          <button type="button" onClick={handleNextUnit} className="nextBtn rounded-end-pill">
+          <button
+            type="button"
+            // onClick={handleNextUnit}
+            className="nextBtn rounded-end-pill"
+          >
             <FaCaretLeft />
           </button>
         </div>
@@ -81,31 +70,18 @@ const UnitDetails = () => {
             <tbody>
               <tr>
                 <td>Price:</td>
-                <td>{unit.price}</td>
+                {/* <td>{unit.price}</td> */}
               </tr>
               <tr>
                 <td>Unit Type</td>
-                <td>{unit.type}</td>
+                {/* <td>{unit.unit_type}</td> */}
               </tr>
               <tr>
                 <td>Unit Location</td>
-                <td>{unit.location}</td>
-              </tr>
-              <tr>
-                <td>Rating:</td>
-                <td>
-                  <div style={{ width: 100, height: 100 }}>
-                    <CircularProgressbarWithChildren value={5 * 100}>
-                      <div style={{ fontSize: 20, fontWeight: 'bold' }}>{5}</div>
-                    </CircularProgressbarWithChildren>
-                  </div>
-                </td>
+                {/* <td>{unit.location}</td> */}
               </tr>
             </tbody>
           </table>
-          <button type="button" className=" rounded-end-pill rounded-start-pill">
-            <Link to="/reservation">Make a Reservation</Link>
-          </button>
         </div>
       </div>
     </div>
