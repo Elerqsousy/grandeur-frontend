@@ -1,0 +1,84 @@
+{
+  "units": [
+    {
+      "name": "Cozy Cottage",
+      "description": "A charming cottage in the woods, perfect for a peaceful escape. This quaint unit offers a serene ambiance, surrounded by nature. Enjoy the rustic charm and relaxation.",
+      "image": ["cottage1.jpg", "cottage2.jpg", "cottage3.jpg"],
+      "price": 150,
+      "type": "Cottage",
+      "location": "Forest Retreat"
+    },
+    {
+      "name": "Beachfront Villa",
+      "description": "Luxurious villa with a view of the sea. Indulge in the lap of luxury and experience breathtaking ocean vistas from your private villa.",
+      "image": ["villa1.jpg", "villa2.jpg"],
+      "price": 350,
+      "type": "Villa",
+      "location": "Beachside Paradise"
+    },
+    {
+      "name": "City Apartment",
+      "description": "Modern apartment in the heart of the city, offering convenience and style. Explore the bustling metropolis from your comfortable urban retreat.",
+      "image": ["apartment1.jpg", "apartment2.jpg"],
+      "price": 200,
+      "type": "Apartment",
+      "location": "Downtown Metropolis"
+    },
+    {
+      "name": "Mountain Cabin",
+      "description": "Rustic cabin with a mountain view, ideal for nature enthusiasts. Enjoy the tranquility and scenic beauty of the mountains from this cozy retreat.",
+      "image": ["cabin1.jpg"],
+      "price": 120,
+      "type": "Cabin",
+      "location": "Mountain Getaway"
+    },
+    {
+      "name": "Lakeside Retreat",
+      "description": "Tranquil retreat by the lake, perfect for relaxation and water activities. Revel in the peacefulness and scenic charm of the lakeside oasis.",
+      "image": ["retreat1.jpg", "retreat2.jpg"],
+      "price": 180,
+      "type": "Retreat",
+      "location": "Lakeside Oasis"
+    },
+    {
+      "name": "Historic Mansion",
+      "description": "Elegant mansion with a rich history, offering a taste of grandeur. Step back in time and experience the opulence of this historic gem.",
+      "image": ["mansion1.jpg", "mansion2.jpg"],
+      "price": 500,
+      "type": "Mansion",
+      "location": "Historic District"
+    },
+    {
+      "name": "Ski Chalet",
+      "description": "Cozy chalet for winter sports enthusiasts. Embrace the winter wonderland and stay warm in this charming ski chalet at the ski resort.",
+      "image": ["chalet1.jpg"],
+      "price": 250,
+      "type": "Chalet",
+      "location": "Ski Resort"
+    },
+    {
+      "name": "Desert Oasis",
+      "description": "A desert oasis with stunning views, perfect for experiencing the beauty of the desert. Explore the vast desert landscapes and enjoy a peaceful retreat.",
+      "image": ["oasis1.jpg", "oasis2.jpg"],
+      "price": 170,
+      "type": "Oasis",
+      "location": "Desert Paradise"
+    },
+    {
+      "name": "Seaside Bungalow",
+      "description": "Charming bungalow by the sea, offering a picturesque coastal experience. Wake up to the sound of waves in this cozy seaside haven.",
+      "image": ["bungalow1.jpg", "bungalow2.jpg"],
+      "price": 130,
+      "type": "Bungalow",
+      "location": "Seaside Haven"
+    },
+    {
+      "name": "Rural Farmhouse",
+      "description": "Quaint farmhouse in the countryside, a perfect retreat from city life. Experience the simple charm and tranquility of the rural countryside.",
+      "image": ["farmhouse1.jpg", "farmhouse2.jpg"],
+      "price": 90,
+      "type": "Farmhouse",
+      "location": "Rural Retreat"
+    }
+  ]
+}
