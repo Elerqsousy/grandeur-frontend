@@ -1,36 +1,38 @@
 import React, { useEffect, useState } from 'react';
 import { FaCaretLeft } from 'react-icons/fa6';
 import 'react-circular-progressbar/dist/styles.css';
+import axios from 'axios';
 import img from './1.png';
 
 const UnitDetails = () => {
   const API_BASE_URL = 'http://localhost:3000/units';
   const [unit, setUnit] = useState(null);
-  const [error, setError] = useState(null);
-  console.log(unit.name);
+  // const [error, setError] = useState(null);
 
   const fetchData = async (url) => {
     try {
-      const response = await fetch(url);
-      const data = await response.json();
-      setUnit(data);
+      axios.get(url).then((response) => {
+        setUnit(response);
+        console.log(response);
+      });
     } catch (error) {
-      setError(error);
+      console.log(error);
     }
   };
 
+  console.log(unit);
   useEffect(() => {
     // fetchData(`${API_BASE_URL}/${id}`);
     fetchData(`${API_BASE_URL}/1`);
   }, []);
-  if (error) {
-    return (
-      <div>
-        Error:
-        {error}
-      </div>
-    );
-  }
+  // if (error) {
+  //   return (
+  //     <div>
+  //       Error:
+  //       {error}
+  //     </div>
+  //   );
+  // }
 
   // const handleNextUnit = () => {
   //   const currentUnitIndex = nextUnitId.findIndex(
