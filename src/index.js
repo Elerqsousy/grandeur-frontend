@@ -9,11 +9,16 @@ import 'bootstrap/dist/css/bootstrap.css';
 import ErrorPage from './components/error_page';
 import Root from './routes/root';
 import store from './redux/store';
+import SplashScreen from './components/splash_screen';
+
+const isUserLoggedIn = () => {
+  const status = sessionStorage.getItem('status');
+  return status === 'true';
+};
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Root />,
     errorElement: <ErrorPage />,
   },
 ]);
