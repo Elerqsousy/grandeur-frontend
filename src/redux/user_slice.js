@@ -33,3 +33,46 @@ export const userRegister = createAsyncThunk('user/register', async (name) => {
     throw new Error('Failed to sign up. Please try again.');
   }
 });
+
+const userSlice = createSlice({
+  name: 'user',
+  initialState,
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(userRegister.pending, (state) => ({
+        ...state,
+        status: 'loading',
+        error: null,
+      }))
+      .addCase(userRegister.fulfilled, (state, action) => ({
+        ...state,
+        user: action.payload,
+        status: 'succeeded',
+        error: null,
+      }))
+      .addCase(userRegister.rejected, (state) => ({
+        ...state,
+        status: 'failed',
+        error: null,
+      }))
+      .addCase(userLogin.pending, (state) => ({
+        ...state,
+        status: 'loading',
+        error: null,
+      }))
+      .addCase(userLogin.fulfilled, (state, action) => ({
+        ...state,
+        user: action.payload,
+        status: 'succeeded',
+        error: null,
+      }))
+      .addCase(userLogin.rejected, (state) => ({
+        ...state,
+        status: 'failed',
+        error: null,
+      }));
+  },
+});
+
+export default userSlice.reducer;
