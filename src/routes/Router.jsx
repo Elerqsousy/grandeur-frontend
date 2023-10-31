@@ -10,9 +10,9 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path: '/detailPage',
+        path: '/detailPage/:id',
         element: <DetailPage />,
-        // loader: fetch()
+        loader: ({ params }) => fetch(`http://localhost:3000/units/${params.id}`),
       },
     ],
 

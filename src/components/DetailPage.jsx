@@ -1,7 +1,10 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
 
-const DetailPage = () => (
-  <div>DetailPage</div>
-);
-
-export default DetailPage;
+export default function DetailPage() {
+  const data = useLoaderData();
+  console.log(data);
+  return (
+    <div>DetailPage</div>
+  );
+}
