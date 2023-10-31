@@ -14,6 +14,7 @@ const router = createBrowserRouter([
         element: <DetailPage />,
         loader: ({ params }) => fetch(`http://localhost:3000/units/${params.id}`),
       },
+
     ],
 
   },
