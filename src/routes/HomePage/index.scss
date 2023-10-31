@@ -1,0 +1,54 @@
+$sec-color: #c2c2c2;
+$light-gray: #eae8e8;
+
+.main-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  max-height: 100vh;
+  overflow-y: scroll;
+
+  .main-title {
+    font-size: 38px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    font-family: 'Anton', sans-serif;
+    margin-bottom: 3px;
+  }
+
+  .main-subtitle {
+    font-weight: 500;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+}
+
+.sec-color {
+    color: $sec-color;
+}
+
+
+
+.breaker {
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 14px;
+    color: $light-gray;
+}
+
+.display-section-container {
+    display: flex;
+    align-items: center;
+    max-height: fit-content;
+    justify-content: space-between;
+    width: 100%;
+
+    .items-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        padding: 0 40px ;
+    }
+}
