@@ -19,6 +19,7 @@ const isUserLoggedIn = () => {
 const router = createBrowserRouter([
   {
     path: '/',
+    element: isUserLoggedIn() ? <Root /> : <SplashScreen />,
     errorElement: <ErrorPage />,
   },
 ]);
