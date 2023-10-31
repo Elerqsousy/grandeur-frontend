@@ -10,6 +10,34 @@ const LoginSession = ({ btnName }) => {
   const [error, setError] = useState('');
   const dispatch = useDispatch();
 
+  const loginFormSubmissionHandler = (e) => {
+    e.preventDefault();
+    if (!nameData) {
+      setError('Username cannot be empty');
+      return;
+    }
+
+    dispatch(userLogin(nameData))
+      .then((response) => {
+        if (response.payload) {
+          const userInfo = {
+            id: response.payload.id,
+            name: response.payload.name,
+          };
+          return userInfo;
+        }
+        throw new Error('Response payload or id is undefined.');
+      })
+      .then((userInfo) => {
+        sessionStorage.setItem('status', 'true');
+        sessionStorage.setItem('logged_user', JSON.stringify(userInfo));
+        window.location.replace('/');
+      })
+      .catch(() => {
+        setError('Failed to login. User does not exist!');
+      });
+  };
+
   const textInputHandler = (e) => {
     setNameData(e.target.value);
     setError('');
