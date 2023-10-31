@@ -5,6 +5,7 @@
     filter: blur(12px);
     opacity: 0;
   }
+
   100% {
     filter: blur(0);
     opacity: 1;
@@ -16,6 +17,7 @@
     transform: translateY(1000px);
     opacity: 0;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -119,7 +121,7 @@ p {
   color: white;
 }
 
-text-focus-in {
+.text-focus-in {
   color: white;
   animation: text-focus-in 1.2s cubic-bezier(0.55, 0.085, 0.68, 0.53) 0.7s both;
 }
