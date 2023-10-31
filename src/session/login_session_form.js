@@ -10,6 +10,11 @@ const LoginSession = ({ btnName }) => {
   const [error, setError] = useState('');
   const dispatch = useDispatch();
 
+  const textInputHandler = (e) => {
+    setNameData(e.target.value);
+    setError('');
+  };
+
   return (
     <div className="form-container">
       <form action="" onSubmit={(e) => loginFormSubmissionHandler(e)}>
