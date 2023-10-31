@@ -9,12 +9,19 @@ import 'bootstrap/dist/css/bootstrap.css';
 import ErrorPage from './components/error_page';
 import Root from './routes/root';
 import store from './redux/store';
+import HomePage from './routes/HomePage';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Root />,
     errorElement: <ErrorPage />,
+    children: [
+      {
+        path: '/',
+        element: <HomePage />,
+      },
+    ],
   },
 ]);
 
