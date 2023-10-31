@@ -3,6 +3,12 @@ import axios from 'axios';
 
 const API_URL = 'http://127.0.0.1:3000';
 
+const initialState = {
+  user: null,
+  status: null,
+  error: null,
+};
+
 export const userLogin = createAsyncThunk('user/userLogin', async (name) => {
   try {
     const response = await axios.post(
