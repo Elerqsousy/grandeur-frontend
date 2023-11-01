@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 const UnitItem = ({ item }) => {
   const { name } = item;
 
+  console.log(item);
   return (
     <div>
       <h2>{name}</h2>
