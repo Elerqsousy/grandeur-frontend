@@ -129,7 +129,7 @@ form[action$="destroy"] button {
   width: 100%;
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
   #sidebar {
     display: none !important;
   }
@@ -290,7 +290,7 @@ i {
   color: hsl(224, 98%, 58%);
 }
 
-@media screen and (min-width:601px) {
+@media screen and (min-width: 601px) {
   #detail {
     max-width: calc(100% - 12rem);
   }
