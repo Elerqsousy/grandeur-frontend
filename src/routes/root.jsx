@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 
 export default function Root() {
   const getData = () => {
@@ -48,6 +49,9 @@ export default function Root() {
             </li>
           </ul>
         </nav>
+      </div>
+      <div id="detail">
+        <Outlet />
       </div>
     </>
   );
