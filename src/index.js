@@ -10,17 +10,19 @@ import ErrorPage from './components/error_page';
 import Root from './routes/root';
 import store from './redux/store';
 import SplashScreen from './components/splash_screen';
-
-const isUserLoggedIn = () => {
-  const status = sessionStorage.getItem('status');
-  return status === 'true';
-};
+import ProtectedRoute from './routes/ProtectedRoute';
 
 const router = createBrowserRouter([
   {
-    path: '/',
-    element: isUserLoggedIn() ? <Root /> : <SplashScreen />,
+    path: '/splash',
+    element: <SplashScreen />,
     errorElement: <ErrorPage />,
+  },
+  {
+    path: '/',
+    element: <ProtectedRoute element={Root} />,
+    errorElement: <ErrorPage />,
+    children: [],
   },
 ]);
 
