@@ -4,40 +4,33 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-}
 
-p {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
+  form {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-form {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+    input {
+      padding: 10px;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 310px;
+    }
 
-input {
-  padding: 10px;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  width: 310px;
-}
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
 
-button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-
-  &:hover {
-    background-color: #0056b3;
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
   }
 }
