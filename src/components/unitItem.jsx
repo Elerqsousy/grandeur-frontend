@@ -1,13 +1,29 @@
 import PropTypes from 'prop-types';
 
-const UnitItem = ({ item }) => {
-  const { name } = item;
+const UnitItem = ({ item, img }) => {
+  const {
+    name, description, price, location,
+  } = item;
 
-  console.log(item);
   return (
-    <div>
-      <h2>{name}</h2>
-    </div>
+    <article className="unit-display-container">
+      <div className="image-container">
+        <p className="price-fixed shadow-lg">
+          {item.unit_type}
+          {' '}
+          $
+          {price}
+        </p>
+        <img src={img} alt="unit show" />
+      </div>
+      <h2 className="sec-title title-container">{name}</h2>
+      <span className="breaker mb-3">................</span>
+      <p className="details">{description}</p>
+      <p className="location">
+        <span>Location: </span>
+        {location}
+      </p>
+    </article>
   );
 };
 
@@ -26,4 +42,5 @@ UnitItem.propTypes = {
     created_at: PropTypes.instanceOf(Date),
     updated_at: PropTypes.instanceOf(Date),
   }).isRequired,
+  img: PropTypes.node.isRequired,
 };
