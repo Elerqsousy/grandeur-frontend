@@ -4,10 +4,16 @@ import React from 'react';
 import './index.scss';
 import UnitItem from '../../components/unitItem';
 
+import img3 from '../../assets/img3.webp';
+import img4 from '../../assets/img4.jpeg';
+
+const demoImgs = [img3, img3, img3, img4];
+
 const UnitsDisplay = ({ list }) => {
   const [start, setStart] = React.useState(0);
   const [count, setCount] = React.useState(2);
   const [displayedList, setDisplayedList] = React.useState(list.slice(start, start + count));
+
   const handleResize = () => {
     if (window.innerWidth >= 1200) {
       setCount(3);
@@ -42,13 +48,15 @@ const UnitsDisplay = ({ list }) => {
 
   return (
     <div className="display-section-container">
-      <button type="button" className="btn btn-primary" disabled={start === 0} onClick={onPrevious}>
+      <button type="button" className="nav-btn previous-btn" disabled={start === 0} onClick={onPrevious}>
         &#x2190;
       </button>
       <section className="items-container">
-        {displayedList.map((item) => <UnitItem key={item.id} item={item} />)}
+        {displayedList.map((item) => (
+          <UnitItem key={item.id} item={item} img={demoImgs[item.id - 1]} />
+        ))}
       </section>
-      <button type="button" className="btn btn-primary" disabled={start + count >= list.length} onClick={onNext}>
+      <button type="button" className="next-btn nav-btn" disabled={start + count >= list.length} onClick={onNext}>
         &#x2192;
       </button>
     </div>

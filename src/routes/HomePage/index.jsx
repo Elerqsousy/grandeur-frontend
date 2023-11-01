@@ -63,7 +63,7 @@ const HomePage = () => {
     <div className="main-page-container">
       <h1 className="main-title">Latest Units</h1>
       <span className="main-subtitle sec-color">Browse available units</span>
-      <span className="main-breaker breaker mb-5">...................</span>
+      <span className="breaker mb-5">...................</span>
       {!!data.length && <UnitsDisplay list={data} />}
     </div>
   );
