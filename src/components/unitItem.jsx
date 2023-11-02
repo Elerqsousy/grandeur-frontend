@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import ContainerBtn from './container_btn';
 
 const UnitItem = ({ item, img }) => {
   const {
@@ -6,24 +7,26 @@ const UnitItem = ({ item, img }) => {
   } = item;
 
   return (
-    <article className="unit-display-container">
-      <div className="image-container">
-        <p className="price-fixed shadow-lg">
-          {item.unit_type}
-          {' '}
-          $
-          {price}
+    <ContainerBtn urlVariable={`/units/${item.id}`}>
+      <article className="unit-display-container">
+        <div className="image-container">
+          <p className="price-fixed shadow-lg">
+            {item.unit_type}
+            {' '}
+            $
+            {price}
+          </p>
+          <img src={img} alt="unit show" />
+        </div>
+        <h2 className="sec-title title-container">{name}</h2>
+        <span className="breaker mb-3">................</span>
+        <p className="details">{description}</p>
+        <p className="location">
+          <span>Location: </span>
+          {location}
         </p>
-        <img src={img} alt="unit show" />
-      </div>
-      <h2 className="sec-title title-container">{name}</h2>
-      <span className="breaker mb-3">................</span>
-      <p className="details">{description}</p>
-      <p className="location">
-        <span>Location: </span>
-        {location}
-      </p>
-    </article>
+      </article>
+    </ContainerBtn>
   );
 };
 
