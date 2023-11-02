@@ -2,7 +2,7 @@ import React from 'react';
 import {
   Outlet, BrowserRouter as Router, Routes, Route,
 } from 'react-router-dom'; // Import the necessary routing components
-import Item1Detail from '../components/ItemDetail'; // Import the Item1Detail component
+// import ItemDetail from '../components/ItemDetail';
 
 export default function Root() {
   return (
@@ -34,7 +34,7 @@ export default function Root() {
         <nav>
           <ul>
             <li>
-              <a href="/items">item 1</a>
+              <a href="/contacts/1">item 1</a>
             </li>
             <li>
               <a href="/contacts/2">item 2</a>
@@ -54,7 +54,7 @@ export function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Root />} />
-        <Route path="/items" element={<Item1Detail />} />
+        {/* <Route path="/ItemDetail" element={<ItemDetail />} /> */}
       </Routes>
     </Router>
   );
