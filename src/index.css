@@ -1,3 +1,5 @@
+@import './assets/sheets/css-reset.css';
+
 html {
   box-sizing: border-box;
 }
@@ -125,6 +127,12 @@ form[action$="destroy"] button {
   display: flex;
   height: 100%;
   width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  #sidebar {
+    display: none !important;
+  }
 }
 
 #sidebar {
@@ -282,9 +290,14 @@ i {
   color: hsl(224, 98%, 58%);
 }
 
+@media screen and (min-width: 601px) {
+  #detail {
+    max-width: calc(100% - 12rem);
+  }
+}
+
 #detail {
   flex: 1;
-  padding: 2rem 4rem;
   width: 100%;
 }
 
