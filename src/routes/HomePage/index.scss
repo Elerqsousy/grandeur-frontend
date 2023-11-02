@@ -83,7 +83,7 @@
       background: $primary-light-color;
     }
 
-    @media screen and (max-width: 318px) {
+    @media screen and (max-width: 364px) {
       padding: 16px 8px !important;
 
       &.previous-btn {
@@ -106,7 +106,7 @@
   background: $united-gray;
   padding: 10px 10px 20px 10px;
   border-radius: 15px;
-  max-width: 254px;
+  max-width: 300px;
 
   .image-container {
     position: relative;

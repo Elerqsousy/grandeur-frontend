@@ -19,7 +19,7 @@ const UnitsDisplay = ({ list }) => {
       setCount(3);
     } else if (window.innerWidth >= 992) {
       setCount(2);
-    } else if (window.innerWidth <= 768) {
+    } else if (window.innerWidth < 992) {
       setCount(1);
     }
   };

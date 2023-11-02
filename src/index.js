@@ -10,11 +10,18 @@ import ErrorPage from './components/error_page';
 import Root from './routes/root';
 import store from './redux/store';
 import HomePage from './routes/HomePage';
+import SplashScreen from './components/splash_screen';
+import ProtectedRoute from './routes/ProtectedRoute';
 
 const router = createBrowserRouter([
   {
+    path: '/splash',
+    element: <SplashScreen />,
+    errorElement: <ErrorPage />,
+  },
+  {
     path: '/',
-    element: <Root />,
+    element: <ProtectedRoute element={Root} />,
     errorElement: <ErrorPage />,
     children: [
       {
