@@ -2,13 +2,18 @@ import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 
 import './index.scss';
+import classNames from 'classnames';
 
-const ContainerBtn = ({ urlVariable, children }) => {
+const ContainerBtn = (
+  {
+    urlVariable, children, onClick, className,
+  },
+) => {
   const navigate = useNavigate();
   const handleClick = () => navigate(urlVariable);
 
   return (
-    <button type="button" className="container-btn" onClick={handleClick}>
+    <button type="button" className={classNames('container-btn', className)} onClick={urlVariable ? handleClick : onClick}>
       {children}
     </button>
   );
@@ -17,6 +22,14 @@ const ContainerBtn = ({ urlVariable, children }) => {
 export default ContainerBtn;
 
 ContainerBtn.propTypes = {
-  urlVariable: PropTypes.string.isRequired,
+  urlVariable: PropTypes.string,
   children: PropTypes.node.isRequired,
+  onClick: PropTypes.func,
+  className: PropTypes.string,
+};
+
+ContainerBtn.defaultProps = {
+  urlVariable: null,
+  onClick: () => {},
+  className: '',
 };
