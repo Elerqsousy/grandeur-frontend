@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const DetailPage = ({ image }) => (
   <div>
     <img src={image} alt="Detail" />
-    {/* Other component content */}
+    {/* Other component content will be rendered here */}
   </div>
 );
 
