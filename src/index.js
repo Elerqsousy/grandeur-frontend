@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 import ErrorPage from './components/error_page';
 import Root from './routes/root';
+import ReservationsPage from './routes/reservations_page.tsx';
 import store from './redux/store';
 import HomePage from './routes/HomePage';
 import SplashScreen from './components/splash_screen';
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <HomePage />,
+      },
+      {
+        path: '/reservations',
+        element: <ReservationsPage />,
       },
     ],
   },
