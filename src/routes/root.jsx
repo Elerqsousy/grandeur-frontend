@@ -1,8 +1,9 @@
 import React from 'react';
 import {
   Outlet, BrowserRouter as Router, Routes, Route,
-} from 'react-router-dom'; // Import the necessary routing components
-// import ItemDetail from '../components/ItemDetail';
+} from 'react-router-dom';
+
+import DetailPage from '../components/detailPage';
 
 export default function Root() {
   return (
@@ -54,7 +55,7 @@ export function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Root />} />
-        {/* <Route path="/ItemDetail" element={<ItemDetail />} /> */}
+        <Route path="/detail/:imageId" element={<DetailPage />} />
       </Routes>
     </Router>
   );
