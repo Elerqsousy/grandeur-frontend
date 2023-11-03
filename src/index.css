@@ -1,4 +1,7 @@
 @import './assets/sheets/css-reset.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 html {
   box-sizing: border-box;
