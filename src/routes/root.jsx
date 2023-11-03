@@ -1,9 +1,7 @@
 import React from 'react';
 import {
-  Outlet, BrowserRouter as Router, Routes, Route,
+  Outlet,
 } from 'react-router-dom';
-
-import DetailPage from '../components/detailPage';
 
 export default function Root() {
   return (
@@ -47,16 +45,5 @@ export default function Root() {
         <Outlet />
       </div>
     </>
-  );
-}
-
-export function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Root />} />
-        <Route path="/detail/:imageId" element={<DetailPage />} />
-      </Routes>
-    </Router>
   );
 }

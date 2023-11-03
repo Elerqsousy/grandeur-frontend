@@ -12,6 +12,7 @@ import store from './redux/store';
 import HomePage from './routes/HomePage';
 import SplashScreen from './components/splash_screen';
 import ProtectedRoute from './routes/ProtectedRoute';
+import DetailPage from './components/detailPage';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <HomePage />,
+      },
+      {
+        path: '/detail/:imageId',
+        element: <DetailPage />,
       },
     ],
   },
