@@ -1,6 +1,7 @@
 @import '../../assets/sheets/global-variables.scss';
 
-.main-page-container, .reservation-page-container {
+.main-page-container,
+.reservation-page-container {
   display: flex;
   justify-content: center;
   align-items: center;
