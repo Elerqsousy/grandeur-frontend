@@ -42,7 +42,90 @@ const UnitForm = () => {
   };
 
   return (
-
+    <div className="div-wrapper">
+      <div className="form-container">
+        <h2>Add a New Unit</h2>
+        <form onSubmit={handleSubmit} encType="multipart/form-data">
+          <div>
+            <input
+              type="text"
+              placeholder="Enter unit name"
+              name="name"
+              id="name"
+              value={unitData.name}
+              onChange={(e) => handleInputChange(e.target.name, e.target.value)}
+              required
+            />
+          </div>
+          <div>
+            <div>
+              <input
+                type="number"
+                placeholder="Enter unit price"
+                name="price"
+                id="price"
+                value={unitData.price}
+                onChange={(e) => {
+                  const { name, value } = e.target;
+                  return handleInputChange(
+                    name,
+                    Number(value) === 0 ? undefined : Number(value),
+                  );
+                }}
+                required
+              />
+            </div>
+          </div>
+          <div>
+            <input
+              type="text"
+              name="unit_type"
+              placeholder="Enter unit type (e.g. 'apartment')"
+              id="unit_type"
+              value={unitData.unit_type}
+              onChange={(e) => handleInputChange(e.target.name, e.target.value)}
+              required
+            />
+          </div>
+          <div>
+            <input
+              type="file"
+              placeholder="Upload unit image"
+              name="unit[images][]"
+              multiple
+              accept="image/*"
+              id="image"
+              onChange={handleImageChange}
+              ref={imagesRef}
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              name="location"
+              placeholder="Enter unit location (e.g. 'Accra, Cairo')"
+              id="location"
+              value={unitData.location}
+              onChange={(e) => handleInputChange(e.target.name, e.target.value)}
+              required
+            />
+          </div>
+          <div>
+            <textarea
+              name="description"
+              placeholder="Enter unit description (e.g. 'This is a beautiful apartment')"
+              id="description"
+              value={unitData.description}
+              onChange={(e) => handleInputChange(e.target.name, e.target.value)}
+              required
+            />
+          </div>
+          <div>
+            <button type="submit">Add Unit</button>
+          </div>
+        </form>
+      </div>
+    </div>
   );
 };
 
