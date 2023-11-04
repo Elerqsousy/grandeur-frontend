@@ -13,6 +13,7 @@ import store from './redux/store';
 import HomePage from './routes/HomePage';
 import SplashScreen from './components/splash_screen';
 import ProtectedRoute from './routes/ProtectedRoute';
+import UnitForm from './components/UnitForm';
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: '/reservations',
         element: <ReservationsPage />,
+      },
+      {
+        path: '/unit-form',
+        element: <UnitForm />,
       },
     ],
   },
