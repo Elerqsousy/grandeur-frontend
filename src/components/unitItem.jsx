@@ -49,7 +49,6 @@ UnitItem.propTypes = {
     id: PropTypes.number,
     name: PropTypes.string,
     description: PropTypes.string,
-    image: PropTypes.shape([]),
     price: PropTypes.number,
     unit_type: PropTypes.string,
     location: PropTypes.string,

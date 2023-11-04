@@ -13,7 +13,7 @@ const api = {};
 api.fetchUnits = createAsyncThunk('UNITS/FETCHALL', async () => {
   const apiCall = await axios
     .get(`${baseURL()}/units`)
-    .then((response) => response.data.content);
+    .then((response) => response.data);
   return apiCall;
 });
 
