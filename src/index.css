@@ -52,6 +52,9 @@ button:active {
   border-right: solid 1px #e3e3e3;
   display: flex;
   flex-direction: column;
+  position: fixed;
+  left: 0;
+  height: 100vh;
 }
 
 #sidebar > * {
@@ -138,6 +141,13 @@ button:active {
 #detail {
   flex: 1;
   width: 100%;
+  margin-left: auto;
+}
+
+@media screen and (min-width: 1290px) {
+  #detail {
+    margin-left: 15vw;
+  }
 }
 
 #zero-state {

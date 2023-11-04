@@ -44,7 +44,7 @@ export default function ReservationsPage() {
     <div className="reservation-page-container ">
       <h1 className="main-title">Reservations</h1>
       <span className="main-subtitle sec-color">browse your reservations</span>
-      <span className="breaker mb-5">...................</span>
+      <span className="breaker mb-[2rem]">...................</span>
       <Section childernClassName="flex flex-col gap-[10px] px-0 !my-auto">
         <CollapsibleSection
           title="Past Reservations"

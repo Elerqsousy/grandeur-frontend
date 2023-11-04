@@ -1,6 +1,7 @@
 import React from 'react';
-import { Outlet, NavLink } from 'react-router-dom';
+import { Outlet, NavLink, Link } from 'react-router-dom';
 
+import TopBar from '../components/topbar';
 import logoGreen from '../assets/logo-green.png';
 
 const navRoutes = [
@@ -31,7 +32,9 @@ export default function Root() {
     <>
       <div id="sidebar">
         <div>
-          <img src={logoGreen} alt="Grandeur logo1" />
+          <Link to="/" className="logo">
+            <img src={logoGreen} alt="Grandeur logo" />
+          </Link>
         </div>
         <nav>
           <ul>
@@ -49,9 +52,7 @@ export default function Root() {
         </nav>
       </div>
       <div id="detail">
-        <div id="topbar">
-          <img src={logoGreen} alt="Grandeur logo1" />
-        </div>
+        <TopBar navRoutes={navRoutes} />
         <Outlet />
       </div>
     </>
