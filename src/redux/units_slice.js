@@ -19,6 +19,4 @@ export const unitsSlice = createSlice({
   },
 });
 
-export const { increment, decrement, incrementByAmount } = unitsSlice.actions;
-
 export default unitsSlice.reducer;
