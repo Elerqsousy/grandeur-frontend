@@ -29,4 +29,28 @@ export const createUnit = createAsyncThunk(
   },
 );
 
+const unitFormSlice = createSlice({
+  name: 'unitForm',
+  initialState,
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(createUnit.pending, (state) => ({
+        ...state,
+        status: 'loading',
+        error: null,
+      }))
+      .addCase(createUnit.fulfilled, (state) => ({
+        ...state,
+        status: 'succeeded',
+        error: null,
+      }))
+      .addCase(createUnit.rejected, (state, action) => ({
+        ...state,
+        status: 'failed',
+        error: action.error.message,
+      }));
+  },
+});
+
 export default unitFormSlice.reducer;
