@@ -1,4 +1,5 @@
 .container-btn {
+  display: flex;
   border: 0 !important;
   border-radius: 10px;
   margin: 0;
@@ -7,4 +8,5 @@
   color: inherit;
   border-width: 0 !important;
   box-shadow: none !important;
+  width: 100%;
 }
