@@ -23,7 +23,7 @@ export default function Section({
   return (
     <div
       className={classNames(
-        'flex px-[15px] mb-[30px] w-full relative rounded-[.1875rem] overflow-auto',
+        'flex px-[15px] mb-[30px] w-full relative rounded-[.1875rem] ',
         className,
       )}
     >

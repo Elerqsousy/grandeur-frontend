@@ -27,7 +27,7 @@ export default function CollapsibleSection({
 
   return (
     <Section
-      className={classNames('relative overflow-auto', className)}
+      className={classNames('relative ', className)}
       title={title}
       subtitle={subtitle}
       onClick={() => toggle(!open)}

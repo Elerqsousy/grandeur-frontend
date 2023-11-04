@@ -1,45 +1,57 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, NavLink } from 'react-router-dom';
+
+import logoGreen from '../assets/logo-green.png';
+
+const navRoutes = [
+  {
+    name: 'All Units',
+    route: '/',
+  },
+  {
+    name: 'My Visits',
+    route: '/reservations',
+  },
+  {
+    name: 'Book a Visit',
+    route: '/book-visit',
+  },
+  {
+    name: 'Add Unit',
+    route: '/add-unit',
+  },
+  {
+    name: 'Remove Unit',
+    route: '/remove-unit',
+  },
+];
 
 export default function Root() {
   return (
     <>
       <div id="sidebar">
         <div>
-          <form id="search-form" role="search">
-            <input
-              id="q"
-              aria-label="Search contacts"
-              placeholder="Search"
-              type="search"
-              name="q"
-            />
-            <div
-              id="search-spinner"
-              aria-hidden
-              hidden
-            />
-            <div
-              className="sr-only"
-              aria-live="polite"
-            />
-          </form>
-          <form method="post">
-            <button type="submit">New</button>
-          </form>
+          <img src={logoGreen} alt="Grandeur logo1" />
         </div>
         <nav>
           <ul>
-            <li>
-              <a href="/contacts/1">item 1</a>
-            </li>
-            <li>
-              <a href="/contacts/2">item 2</a>
-            </li>
+            {navRoutes.map((item) => (
+              <li key={item.route} className="transition-all ease-in-out duration-75">
+                <NavLink
+                  to={item.route}
+                  className={({ isActive }) => isActive && 'active'}
+                >
+                  {item.name}
+                </NavLink>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>
       <div id="detail">
+        <div id="topbar">
+          <img src={logoGreen} alt="Grandeur logo1" />
+        </div>
         <Outlet />
       </div>
     </>
