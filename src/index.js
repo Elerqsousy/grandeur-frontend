@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import UnitForm from './components/UnitForm';
 
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -17,25 +18,25 @@ import DetailPage from './components/detailPage';
 
 const router = createBrowserRouter([
   {
-    path: "/splash",
+    path: '/splash',
     element: <SplashScreen />,
     errorElement: <ErrorPage />,
   },
   {
-    path: "/",
+    path: '/',
     element: <ProtectedRoute element={Root} />,
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "/",
+        path: '/',
         element: <HomePage />,
       },
       {
-        path: "/units/:unitId",
+        path: '/units/:unitId',
         element: <DetailPage />,
       },
       {
-        path: "/reservations",
+        path: '/reservations',
         element: <ReservationsPage />,
       },
       {

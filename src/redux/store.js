@@ -1,9 +1,9 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { configureStore } from '@reduxjs/toolkit';
 
-import userReducer from "./user_slice";
-import unitsReducer from "./units_slice";
-import reservationsReducer from "./reservations_slice";
-import detailReducer from "./detail_slice";
+import userReducer from './user_slice';
+import unitsReducer from './units_slice';
+import reservationsReducer from './reservations_slice';
+import detailReducer from './detail_slice';
 
 const store = configureStore({
   reducer: {

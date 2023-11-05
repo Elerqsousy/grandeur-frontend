@@ -1,37 +1,10 @@
+/* eslint-disable */
 import React from 'react';
-<<<<<<< HEAD
 import {
+  Link, NavLink,
   Outlet,
 } from 'react-router-dom';
-=======
-import { Outlet, NavLink, Link } from 'react-router-dom';
-
-import TopBar from '../components/topbar';
-import logoGreen from '../assets/logo-green.png';
-
-const navRoutes = [
-  {
-    name: 'All Units',
-    route: '/',
-  },
-  {
-    name: 'My Visits',
-    route: '/reservations',
-  },
-  {
-    name: 'Book a Visit',
-    route: '/book-visit',
-  },
-  {
-    name: 'Add Unit',
-    route: '/unit-form',
-  },
-  {
-    name: 'Remove Unit',
-    route: '/remove-unit',
-  },
-];
->>>>>>> dev
+import TopBar from './TopBar';
 
 export default function Root() {
   return (

@@ -11,7 +11,7 @@ const initialState = {
 
 export const fetchItemDetail = createAsyncThunk(
   'detail/fetchItemDetail',
-  async (itemId) => {
+  async (unitId) => {
     try {
       const response = await axios.get(`${API_URL}/units/${unitId}`);
       return response.data;
@@ -22,25 +22,25 @@ export const fetchItemDetail = createAsyncThunk(
 );
 
 const detailSlice = createSlice({
-  name: "unitDetails",
+  name: 'unitDetails',
   initialState,
   reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(fetchItemDetail.pending, (state) => ({
         ...state,
-        status: "loading",
+        status: 'loading',
         error: null,
       }))
       .addCase(fetchItemDetail.fulfilled, (state, action) => ({
         ...state,
         itemDetail: action.payload,
-        status: "succeeded",
+        status: 'succeeded',
         error: null,
       }))
       .addCase(fetchItemDetail.rejected, (state, action) => ({
         ...state,
-        status: "failed",
+        status: 'failed',
         error: action.error.message,
       }));
   },

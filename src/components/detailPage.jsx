@@ -4,8 +4,14 @@ import PropTypes from 'prop-types';
 const DetailPage = ({ image, price, description }) => (
   <div>
     <img src={image} alt="Detail" />
-    <p>Price: {price}</p>
-    <p>Description: {description}</p>
+    <p>
+      Price:
+      {price}
+    </p>
+    <p>
+      Description:
+      {description}
+    </p>
   </div>
 );
 
