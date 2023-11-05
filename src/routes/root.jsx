@@ -1,5 +1,5 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, Link } from 'react-router-dom';
 
 export default function Root() {
   return (
@@ -14,15 +14,8 @@ export default function Root() {
               type="search"
               name="q"
             />
-            <div
-              id="search-spinner"
-              aria-hidden
-              hidden
-            />
-            <div
-              className="sr-only"
-              aria-live="polite"
-            />
+            <div id="search-spinner" aria-hidden hidden />
+            <div className="sr-only" aria-live="polite" />
           </form>
           <form method="post">
             <button type="submit">New</button>
@@ -35,6 +28,9 @@ export default function Root() {
             </li>
             <li>
               <a href="/contacts/2">item 2</a>
+            </li>
+            <li>
+              <Link to="/unit-form">Add Unit</Link>
             </li>
           </ul>
         </nav>
