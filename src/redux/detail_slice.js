@@ -22,25 +22,25 @@ export const fetchItemDetail = createAsyncThunk(
 );
 
 const detailSlice = createSlice({
-  name: 'detail',
+  name: "unitDetails",
   initialState,
   reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(fetchItemDetail.pending, (state) => ({
         ...state,
-        status: 'loading',
+        status: "loading",
         error: null,
       }))
       .addCase(fetchItemDetail.fulfilled, (state, action) => ({
         ...state,
         itemDetail: action.payload,
-        status: 'succeeded',
+        status: "succeeded",
         error: null,
       }))
       .addCase(fetchItemDetail.rejected, (state, action) => ({
         ...state,
-        status: 'failed',
+        status: "failed",
         error: action.error.message,
       }));
   },
