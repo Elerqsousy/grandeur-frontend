@@ -20,12 +20,12 @@
 
     .btn {
       border-radius: 5px;
-      background: #007bff;
+      background: #97bf0f;
       color: #fff;
       transition: all 0.3s ease-in-out;
 
       &:hover {
-        background: #0056b3;
+        background: #87b000;
       }
     }
 
@@ -40,8 +40,8 @@
       padding: 0.7rem 1rem;
 
       &:focus {
-        border-color: #007bff;
-        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        border-color: #97bf0f;
+        box-shadow: 0 0 5px #87b000;
         outline: none;
       }
     }
