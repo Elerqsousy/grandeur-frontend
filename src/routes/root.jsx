@@ -19,7 +19,7 @@ const navRoutes = [
   },
   {
     name: 'Add Unit',
-    route: '/add-unit',
+    route: '/unit-form',
   },
   {
     name: 'Remove Unit',
