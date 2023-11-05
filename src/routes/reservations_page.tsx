@@ -7,14 +7,6 @@ import UnitItem from 'components/unitItem';
 import store from '../redux/store';
 import api from '../redux/api';
 
-import img3 from '../assets/img3.webp';
-import img4 from '../assets/img4.jpeg';
-
-const demoImgs = [img3, img3, img3, img4, img3,
-  img3, img3, img4, img3, img3, img3, img4, img3,
-  img3, img3, img4, img3, img3, img3, img4,
-  img3, img3, img3, img4, img3, img3, img3, img4];
-
 export default function ReservationsPage() {
   // eslint-disable-next-line
   const dispatch = useDispatch<typeof store.dispatch>();
@@ -34,7 +26,7 @@ export default function ReservationsPage() {
     <section className="flex justify-center flex-wrap gap-[10px] w-100">
       {itemsArr.map((item: { id: number, unit_details: {} }) => {
         const { id } = item;
-        return <UnitItem key={id} item={item.unit_details} img={demoImgs[id - 1]} pastReservation={past} reservation={item} />;
+        return <UnitItem key={id} item={item.unit_details} pastReservation={past} reservation={item} />;
       })}
     </section>
   );
