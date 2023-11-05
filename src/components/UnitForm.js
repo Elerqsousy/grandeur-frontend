@@ -31,9 +31,7 @@ const UnitForm = () => {
     e.preventDefault();
 
     dispatch(createUnit(unitData))
-      .then((response) => {
-        const formDataInResponse = response.formData;
-        console.log(formDataInResponse);
+      .then(() => {
         navigate('/');
       })
       .catch((error) => {
