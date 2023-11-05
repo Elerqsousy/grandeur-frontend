@@ -74,7 +74,7 @@ const UnitForm = () => {
                 const { name, value } = e.target;
                 return handleInputChange(
                   name,
-                  Number(value) === 0 ? undefined : Number(value)
+                  Number(value) === 0 ? undefined : Number(value),
                 );
               }}
               required
