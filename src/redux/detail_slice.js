@@ -13,7 +13,7 @@ export const fetchItemDetail = createAsyncThunk(
   'detail/fetchItemDetail',
   async (itemId) => {
     try {
-      const response = await axios.get(`${API_URL}/items/${itemId}`);
+      const response = await axios.get(`${API_URL}/units/${unitId}`);
       return response.data;
     } catch (error) {
       throw new Error('Failed to fetch item details.');
