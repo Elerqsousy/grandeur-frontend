@@ -1,47 +1,64 @@
 import React from 'react';
+<<<<<<< HEAD
 import {
   Outlet,
 } from 'react-router-dom';
+=======
+import { Outlet, NavLink, Link } from 'react-router-dom';
+
+import TopBar from '../components/topbar';
+import logoGreen from '../assets/logo-green.png';
+
+const navRoutes = [
+  {
+    name: 'All Units',
+    route: '/',
+  },
+  {
+    name: 'My Visits',
+    route: '/reservations',
+  },
+  {
+    name: 'Book a Visit',
+    route: '/book-visit',
+  },
+  {
+    name: 'Add Unit',
+    route: '/unit-form',
+  },
+  {
+    name: 'Remove Unit',
+    route: '/remove-unit',
+  },
+];
+>>>>>>> dev
 
 export default function Root() {
   return (
     <>
       <div id="sidebar">
         <div>
-          <form id="search-form" role="search">
-            <input
-              id="q"
-              aria-label="Search contacts"
-              placeholder="Search"
-              type="search"
-              name="q"
-            />
-            <div
-              id="search-spinner"
-              aria-hidden
-              hidden
-            />
-            <div
-              className="sr-only"
-              aria-live="polite"
-            />
-          </form>
-          <form method="post">
-            <button type="submit">New</button>
-          </form>
+          <Link to="/" className="logo">
+            <img src={logoGreen} alt="Grandeur logo" />
+          </Link>
         </div>
         <nav>
           <ul>
-            <li>
-              <a href="/contacts/1">item 1</a>
-            </li>
-            <li>
-              <a href="/contacts/2">item 2</a>
-            </li>
+            {navRoutes.map((item) => (
+              <li key={item.route} className="transition-all ease-in-out duration-75">
+                <NavLink
+                  to={item.route}
+                  className={({ isActive }) => isActive && 'active'}
+                >
+                  {item.name}
+                </NavLink>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>
       <div id="detail">
+        <TopBar navRoutes={navRoutes} />
         <Outlet />
       </div>
     </>

@@ -6,14 +6,18 @@ import { Provider } from 'react-redux';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
-import ErrorPage from './components/error_page';
 import Root from './routes/root';
+import ErrorPage from './components/error_page';
 import ReservationsPage from './routes/reservations_page.tsx';
 import store from './redux/store';
 import HomePage from './routes/HomePage';
 import SplashScreen from './components/splash_screen';
 import ProtectedRoute from './routes/ProtectedRoute';
+<<<<<<< HEAD
 import DetailPage from './components/detailPage';
+=======
+import UnitForm from './components/UnitForm';
+>>>>>>> dev
 
 const router = createBrowserRouter([
   {
@@ -37,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "/reservations",
         element: <ReservationsPage />,
+      },
+      {
+        path: '/unit-form',
+        element: <UnitForm />,
       },
     ],
   },
