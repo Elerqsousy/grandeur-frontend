@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import ContainerBtn from './container_btn';
 
 const UnitItem = ({
-  item, img, reservation, pastReservation,
+  item, reservation, pastReservation,
 }) => {
   const {
     name, description, price, location,
@@ -21,7 +21,9 @@ const UnitItem = ({
             $
             {price}
           </p>
-          <img src={img} alt="unit show" className={pastReservation && 'blur-sm'} />
+          {!!item?.image_urls.length && (
+            <img src={item.image_urls[0]} alt="unit show" className={pastReservation && 'blur-sm'} />
+          )}
         </div>
         <h2 className="sec-title title-container">{name}</h2>
         <span className="breaker mb-3">................</span>
@@ -53,10 +55,10 @@ UnitItem.propTypes = {
     unit_type: PropTypes.string,
     location: PropTypes.string,
     user_id: PropTypes.number,
+    image_urls: PropTypes.arrayOf(PropTypes.string),
     created_at: PropTypes.instanceOf(Date),
     updated_at: PropTypes.instanceOf(Date),
   }).isRequired,
-  img: PropTypes.node.isRequired,
   reservation: PropTypes.shape({
     date: PropTypes.instanceOf(Date),
   }),

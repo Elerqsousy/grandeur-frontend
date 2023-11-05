@@ -4,11 +4,6 @@ import React from 'react';
 import './index.scss';
 import UnitItem from '../../components/unitItem';
 
-import img3 from '../../assets/img3.webp';
-import img4 from '../../assets/img4.jpeg';
-
-const demoImgs = [img3, img3, img3, img4];
-
 const UnitsDisplay = ({ list }) => {
   const [start, setStart] = React.useState(0);
   const [count, setCount] = React.useState(2);
@@ -53,7 +48,7 @@ const UnitsDisplay = ({ list }) => {
       </button>
       <section className="items-container">
         {displayedList.map((item) => (
-          <UnitItem key={item.id} item={item} img={demoImgs[item.id - 1]} />
+          <UnitItem key={item.id} item={item} />
         ))}
       </section>
       <button type="button" className="next-btn nav-btn" disabled={start + count >= list.length} onClick={onNext}>

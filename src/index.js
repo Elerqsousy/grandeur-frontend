@@ -6,8 +6,8 @@ import { Provider } from 'react-redux';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
-import ErrorPage from './components/error_page';
 import Root from './routes/root';
+import ErrorPage from './components/error_page';
 import ReservationsPage from './routes/reservations_page.tsx';
 import store from './redux/store';
 import HomePage from './routes/HomePage';
