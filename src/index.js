@@ -17,27 +17,26 @@ import DetailPage from './components/detailPage';
 
 const router = createBrowserRouter([
   {
-    path: '/splash',
+    path: "/splash",
     element: <SplashScreen />,
     errorElement: <ErrorPage />,
   },
   {
-    path: '/',
+    path: "/",
     element: <ProtectedRoute element={Root} />,
     errorElement: <ErrorPage />,
     children: [
       {
-        path: '/',
+        path: "/",
         element: <HomePage />,
       },
       {
-        path: '/detail/:imageId',
+        path: "/units/:unitId",
         element: <DetailPage />,
       },
       {
-        path: '/reservations',
+        path: "/reservations",
         element: <ReservationsPage />,
-
       },
     ],
   },
