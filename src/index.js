@@ -13,11 +13,7 @@ import store from './redux/store';
 import HomePage from './routes/HomePage';
 import SplashScreen from './components/splash_screen';
 import ProtectedRoute from './routes/ProtectedRoute';
-<<<<<<< HEAD
 import DetailPage from './components/detailPage';
-=======
-import UnitForm from './components/UnitForm';
->>>>>>> dev
 
 const router = createBrowserRouter([
   {
