@@ -20,36 +20,6 @@ const ReservationForm = () => {
     dispatch(api.fetchUnits());
   }, [dispatch]);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    dispatch(
-      api.postReservation({
-        unit_id: unitId,
-        user_id: jsonObject.id,
-        location,
-        date: reserveDate,
-      }),
-    );
-    setUnitId('');
-    setLocation('');
-    setReserveDate('');
-
-    navigate('/reservations');
-  };
-
-  const handleUnitChange = (e) => {
-    const selectedUnitId = e.target.value;
-    setUnitId(selectedUnitId);
-
-    const selectedUnit = list.find((unit) => unit.id === selectedUnitId);
-    if (selectedUnit) {
-      setLocation(selectedUnit.location);
-    } else {
-      setLocation('');
-    }
-  };
-
   return (
     <div className="reservation-form-container">
       <form onSubmit={handleSubmit} className="reservation-form">
