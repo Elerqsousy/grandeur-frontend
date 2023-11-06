@@ -1,7 +1,12 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const API_URL = 'http://127.0.0.1:3000';
+const API_URL = () => {
+  if (process.env.NODE_ENV === 'development') {
+    return 'http://127.0.0.1:3000';
+  }
+  return 'https://grandeur-backend.onrender.com';
+};
 
 const initialState = {
   user: null,
@@ -12,7 +17,7 @@ const initialState = {
 export const userLogin = createAsyncThunk('user/userLogin', async (name) => {
   try {
     const response = await axios.post(
-      `${API_URL}/users/login`,
+      `${API_URL()}/users/login`,
       { name },
     );
     return response.data;
@@ -23,7 +28,7 @@ export const userLogin = createAsyncThunk('user/userLogin', async (name) => {
 
 export const userRegister = createAsyncThunk('user/register', async (name) => {
   try {
-    const response = await axios.post(`${API_URL}/users`, {
+    const response = await axios.post(`${API_URL()}/users`, {
       user: {
         name,
       },
