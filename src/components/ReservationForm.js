@@ -20,6 +20,24 @@ const ReservationForm = () => {
     dispatch(api.fetchUnits());
   }, [dispatch]);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    dispatch(
+      api.postReservation({
+        unit_id: unitId,
+        user_id: jsonObject.id,
+        location,
+        date: reserveDate,
+      }),
+    );
+    setUnitId('');
+    setLocation('');
+    setReserveDate('');
+
+    navigate('/reservations');
+  };
+
   return (
     <div className="reservation-form-container">
       <form onSubmit={handleSubmit} className="reservation-form">
