@@ -38,6 +38,18 @@ const ReservationForm = () => {
     navigate('/reservations');
   };
 
+  const handleUnitChange = (e) => {
+    const selectedUnitId = e.target.value;
+    setUnitId(selectedUnitId);
+
+    const selectedUnit = list.find((unit) => unit.id === selectedUnitId);
+    if (selectedUnit) {
+      setLocation(selectedUnit.location);
+    } else {
+      setLocation('');
+    }
+  };
+
   return (
     <div className="reservation-form-container">
       <form onSubmit={handleSubmit} className="reservation-form">
