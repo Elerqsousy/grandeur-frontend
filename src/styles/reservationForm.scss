@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Roboto:wght@400;500;700&display=swap');
+
+.reservation-form-container {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url('https://images.pexels.com/photos/209292/pexels-photo-209292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .reservation-form {
+    background: #769602cc;
+    min-height: 100vh;
+    height: auto;
+    opacity: 0.9;
+    width: 100%;
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+
+    .reservation-form-header {
+      margin: 5rem 0 2.5rem;
+      letter-spacing: 0.2rem;
+      text-align: center;
+      text-decoration: underline;
+      font-family: 'DM Serif Display', serif;
+      font-family: 'Roboto', sans-serif;
+      color: #fff;
+    }
+
+    .reservation-form-description {
+      color: #fff;
+      text-align: center;
+      font-size: 1.2rem;
+      margin-bottom: 5rem;
+    }
+
+    .form-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+
+      .input-holder {
+        border-radius: 0.5rem;
+        box-shadow: none;
+        transition: all 0.3s ease-in-out;
+        text-align: center;
+        background: transparent;
+        border: 1.7px solid #fff;
+        color: #fff;
+
+        &::placeholder {
+          color: #fff;
+          font-size: 1rem;
+        }
+      }
+
+      .custom-select {
+        background: transparent;
+
+        select {
+          padding: 0.5rem 1rem;
+          border-radius: 0.5rem;
+          background: transparent;
+          border: 1.7px solid #fff;
+
+          &::-ms-expand {
+            display: none;
+          }
+        }
+      }
+
+      .unit-btn {
+        border-radius: 5px;
+        background: #fff;
+        color: #97bf0f;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          color: #fff;
+          background: transparent;
+          border: 1px solid #fff;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    .form-section {
+      flex-direction: column;
+      width: 100%;
+      gap: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .reservation-form {
+      padding: 1rem;
+
+      .reservation-form-description {
+        font-size: 1rem;
+      }
+    }
+  }
+}
