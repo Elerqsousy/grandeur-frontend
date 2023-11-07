@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-> # Grandeur                                                                                                     
+> # Grandeur-Frontend                                                                                                     
 
 <a name="readme-top"></a>
 
@@ -27,9 +27,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Grandeur] <a name="about-project"></a>
+# 📖 [Grandeur-Frontend] <a name="about-project"></a>
 
-> **[Grandeur]** is a cutting-edge web application that redefines the way you schedule, book, and secure your dream apartment unit. Designed with convenience and efficiency in mind, Grandeur seamlessly combines the power of React and Rails backend API to offer a comprehensive platform for all your housing needs.
+> **[Grandeur-Frontend]** is a cutting-edge web application that redefines the way you schedule, book, and secure your dream apartment unit. Designed with convenience and efficiency in mind, Grandeur seamlessly combines the power of React and Rails backend API to offer a comprehensive platform for all your housing needs.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -42,7 +42,7 @@
     <li><a href="https://redux.js.org/">Redux</a></li>
     <li><a href="https://tailwindcss.com/">Tailwind CSS</a></li>
     <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
-    <li><a href="https://react.dev/learn">React</a></li>
+    <li><a href="https://sass-lang.com/documentation/">Sass</a></li>
   </ul>
 </details>
 
@@ -65,7 +65,7 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **User registration and log in through username**
+- **User registration and login through username**
 - **Sidenav with links to other pages**
 - **Option to add and reserve a unit**
 - **Displays units list on the home page**
@@ -82,7 +82,7 @@
 
 
 ## 🔗 Back End Link <a name="documentation"></a>
-  > _Our [Grandeur Backend](https://github.com/Elerqsousy/grandeur-backend) code is stored in a separate repository and is built using Ruby on Rails and PostgreSQL database. The backend is responsible for processing data and handling API requests from the front end. To access our backend code, please click [here](https://github.com/Elerqsousy/grandeur-backend)._
+  > _Our [Grandeur Backend](https://github.com/Elerqsousy/grandeur-backend) code is stored in a separate repository and is built using Ruby on Rails and PostgreSQL database. The backend is responsible for processing data and handling API requests from the front end. To access our backend API, please click [here](https://github.com/Elerqsousy/grandeur-backend)._
  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -161,7 +161,7 @@ To run the project, execute the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Ensure that only admin users can access the "Add class" and "Delete class" links]**
+- [ ] **[Ensure that only admin users can access the "Add Unit" and "Remove unit" links]**
 - [ ] **[Add unit details page and delete unit functionality.]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -180,7 +180,7 @@ Feel free to check the [issues page](https://github.com/Elerqsousy/grandeur-fron
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project, give it a star.
+If you like this project, give it a ⭐.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
