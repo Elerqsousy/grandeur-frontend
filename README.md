@@ -145,12 +145,12 @@ To run the project, execute the following command:
 - GitHub: [@Elerqsousy](https://github.com/Elerqsousy)
 - LinkedIn: [Mahmoud Rizk](https://www.linkedin.com/in/mahmoud-rizk/)
 
-👤 : **Prosper Kessie**
+👤 **Prosper Kessie**
 
 - GitHub: [@kessie2862](https://github.com/kessie2862)
 - LinkedIn: [Prosper Kessie](https://www.linkedin.com/in/prosperkessie/)
 
-👤 : **Md Sazzad Hossain**
+👤 **Md Sazzad Hossain**
 
 - GitHub: [@SAZZAD1Q2](https://github.com/SAZZAD1Q2)
 - LinkedIn: [Md Sazzad Hossain](https://www.linkedin.com/in/sazzad3y/)
