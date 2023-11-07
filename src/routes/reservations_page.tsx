@@ -40,7 +40,7 @@ export default function ReservationsPage() {
       <Section childernClassName="flex flex-col gap-[10px] px-0 !my-auto">
         <CollapsibleSection
           title="Past Reservations"
-          className="!m-0 !p-0 border rounded-md flex flex-row "
+          className="!m-0 !p-0 border rounded-md flex flex-row overflow-hidden"
           childernClassName="!px-0 flex flex-row "
         >
           {RenderItem(pastList, true)}
