@@ -4,9 +4,7 @@ import classNames from 'classnames';
 
 import ContainerBtn from './container_btn';
 
-const UnitItem = ({
-  item, reservation, pastReservation,
-}) => {
+const UnitItem = ({ item, reservation, pastReservation }) => {
   const {
     name, description, price, location,
   } = item;
@@ -22,7 +20,11 @@ const UnitItem = ({
             {price}
           </p>
           {!!item?.image_urls.length && (
-            <img src={item.image_urls[0]} alt="unit show" className={pastReservation && 'blur-sm'} />
+            <img
+              src={item.image_urls[0]}
+              alt="unit show"
+              className={pastReservation && 'blur-sm'}
+            />
           )}
         </div>
         <h2 className="sec-title title-container">{name}</h2>
@@ -32,12 +34,16 @@ const UnitItem = ({
           <span>Location: </span>
           {location}
         </p>
-        { !!reservation
-        && (
-        <p className={classNames({ 'text-warning': pastReservation }, 'location')}>
-          <span>Reservation Date: </span>
-          {Moment(reservation.date).format('D MMM, hh:mm a')}
-        </p>
+        {!!reservation && (
+          <p
+            className={classNames(
+              { 'text-warning': pastReservation },
+              'location',
+            )}
+          >
+            <span>Reservation Date: </span>
+            {Moment(reservation.date).format('D MMM, hh:mm a')}
+          </p>
         )}
       </article>
     </ContainerBtn>
@@ -56,11 +62,11 @@ UnitItem.propTypes = {
     location: PropTypes.string,
     user_id: PropTypes.number,
     image_urls: PropTypes.arrayOf(PropTypes.string),
-    created_at: PropTypes.instanceOf(Date),
-    updated_at: PropTypes.instanceOf(Date),
+    created_at: PropTypes.string,
+    updated_at: PropTypes.string,
   }).isRequired,
   reservation: PropTypes.shape({
-    date: PropTypes.instanceOf(Date),
+    date: PropTypes.string,
   }),
   pastReservation: PropTypes.bool,
 };
