@@ -150,10 +150,6 @@ To run the project, execute the following command:
 - GitHub: [@kessie2862](https://github.com/kessie2862)
 - LinkedIn: [Prosper Kessie](https://www.linkedin.com/in/prosperkessie/)
 
-👤 **Md Sazzad Hossain**
-
-- GitHub: [@SAZZAD1Q2](https://github.com/SAZZAD1Q2)
-- LinkedIn: [Md Sazzad Hossain](https://www.linkedin.com/in/sazzad3y/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
