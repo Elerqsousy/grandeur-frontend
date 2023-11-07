@@ -25,4 +25,16 @@ api.fetchReservations = createAsyncThunk('reservations/FETCHALL', async () => {
   return apiCall;
 });
 
+api.postReservation = createAsyncThunk('postreservation/', async (reservation) => {
+  const apiCall = await axios
+    .post(`${baseURL()}/reservations`, {
+      user_id: reservation.user_id,
+      unit_id: reservation.unit_id,
+      location: reservation.location,
+      date: reservation.date,
+    })
+    .then((response) => response.data);
+  return apiCall;
+});
+
 export default api;

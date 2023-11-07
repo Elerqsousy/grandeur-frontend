@@ -14,6 +14,7 @@ import HomePage from './routes/HomePage';
 import SplashScreen from './components/splash_screen';
 import ProtectedRoute from './routes/ProtectedRoute';
 import UnitForm from './components/UnitForm';
+import ReservationForm from './components/ReservationForm';
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: '/unit-form',
         element: <UnitForm />,
+      },
+      {
+        path: '/book-visit',
+        element: <ReservationForm />,
       },
     ],
   },
