@@ -17,7 +17,7 @@ api.fetchUnits = createAsyncThunk('UNITS/FETCHALL', async () => {
   return apiCall;
 });
 
-api.fetchUnit = createAsyncThunk('UNITS/FETCHALL', async (id) => {
+api.fetchUnit = createAsyncThunk('UNIT/FETCHALL', async (id) => {
   const apiCall = await axios
     .get(`${baseURL()}/units/${id}`)
     .then((response) => response.data);
