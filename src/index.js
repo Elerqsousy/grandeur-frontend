@@ -15,6 +15,7 @@ import SplashScreen from './components/splash_screen';
 import ProtectedRoute from './routes/ProtectedRoute';
 import UnitForm from './components/UnitForm';
 import ReservationForm from './components/ReservationForm';
+import UnitDisplayPage from './routes/UnitDisplayPage';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <HomePage />,
+      },
+      {
+        path: '/units/:unitId',
+        element: <UnitDisplayPage />,
       },
       {
         path: '/reservations',
