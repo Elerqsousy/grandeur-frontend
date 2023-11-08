@@ -17,6 +17,13 @@ api.fetchUnits = createAsyncThunk('UNITS/FETCHALL', async () => {
   return apiCall;
 });
 
+api.fetchUnit = createAsyncThunk('UNITS/FETCHALL', async (id) => {
+  const apiCall = await axios
+    .get(`${baseURL()}/units/${id}`)
+    .then((response) => response.data);
+  return apiCall;
+});
+
 api.fetchReservations = createAsyncThunk('reservations/FETCHALL', async () => {
   const userId = JSON.parse(sessionStorage.getItem('logged_user'));
   const apiCall = await axios
