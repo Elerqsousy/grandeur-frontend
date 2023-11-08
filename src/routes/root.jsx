@@ -1,5 +1,8 @@
 import React from 'react';
-import { Outlet, NavLink, Link } from 'react-router-dom';
+import {
+  Outlet, NavLink, Link, useParams,
+} from 'react-router-dom';
+import classNames from 'classnames';
 
 import TopBar from '../components/topbar';
 import logoGreen from '../assets/logo-green.png';
@@ -28,6 +31,13 @@ const navRoutes = [
 ];
 
 export default function Root() {
+  const params = useParams();
+
+  const unitDisplay = (route) => {
+    if (route !== '/' || !params.unitId) return false;
+    return true;
+  };
+
   return (
     <>
       <div id="sidebar">
@@ -42,7 +52,7 @@ export default function Root() {
               <li key={item.route} className="transition-all ease-in-out duration-75">
                 <NavLink
                   to={item.route}
-                  className={({ isActive }) => isActive && 'active'}
+                  className={classNames(({ isActive }) => isActive && 'active', { 'semi-active': unitDisplay(item.route) })}
                 >
                   {item.name}
                 </NavLink>
@@ -52,7 +62,7 @@ export default function Root() {
         </nav>
       </div>
       <div id="detail">
-        <TopBar navRoutes={navRoutes} />
+        <TopBar navRoutes={navRoutes} unitDisplay={unitDisplay} />
         <Outlet />
       </div>
     </>

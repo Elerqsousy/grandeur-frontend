@@ -101,11 +101,11 @@
     color: #eeb004;
   }
 
-  nav a.active span {
+  nav a.active span, nav a.semi-active span {
     color: inherit;
   }
 
-  nav .active i {
+  nav .active i, nav .semi-active i {
     color: inherit;
   }
 
@@ -153,6 +153,11 @@
 
   nav a.active {
     background: #97bf0f;
+    color: white;
+  }
+
+  nav a.semi-active {
+    background: #b2bf88;
     color: white;
   }
 
