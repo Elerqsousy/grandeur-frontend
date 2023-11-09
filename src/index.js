@@ -49,7 +49,7 @@ const router = createBrowserRouter([
         element: <ReservationForm />,
       },
       {
-        path: '/book-visit/:unitId',
+        path: '/book-visit/:unitReservationId',
         element: <ReservationForm />,
       },
     ],
