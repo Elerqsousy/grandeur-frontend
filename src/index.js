@@ -48,6 +48,10 @@ const router = createBrowserRouter([
         path: '/book-visit',
         element: <ReservationForm />,
       },
+      {
+        path: '/book-visit/:unitId',
+        element: <ReservationForm />,
+      },
     ],
   },
 ]);

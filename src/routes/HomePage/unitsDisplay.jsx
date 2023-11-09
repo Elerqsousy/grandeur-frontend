@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 import './index.scss';
 import UnitItem from '../../components/unitItem';
@@ -44,7 +46,11 @@ const UnitsDisplay = ({ list }) => {
   return (
     <div className="display-section-container">
       <button type="button" className="nav-btn previous-btn" disabled={start === 0} onClick={onPrevious}>
-        &#x2190;
+        <FontAwesomeIcon
+          icon={faAngleRight}
+          className="w-[20px] h-[20px] text-white rotate-180 "
+        />
+        {' '}
       </button>
       <section className="items-container">
         {displayedList.map((item) => (
@@ -52,7 +58,11 @@ const UnitsDisplay = ({ list }) => {
         ))}
       </section>
       <button type="button" className="next-btn nav-btn" disabled={start + count >= list.length} onClick={onNext}>
-        &#x2192;
+        <FontAwesomeIcon
+          icon={faAngleRight}
+          className="w-[20px] h-[20px] text-white"
+        />
+        {' '}
       </button>
     </div>
   );
