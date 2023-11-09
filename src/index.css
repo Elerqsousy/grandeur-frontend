@@ -72,11 +72,13 @@ button:active {
   color: #eeb004;
 }
 
-#sidebar nav a.active span, #sidebar nav a.semi-active span {
+#sidebar nav a.active span,
+#sidebar nav a.semi-active span {
   color: inherit;
 }
 
-#sidebar nav .active i, #sidebar nav .semi-active i {
+#sidebar nav .active i,
+#sidebar nav .semi-active i {
   color: inherit;
 }
 
