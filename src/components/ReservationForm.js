@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import api from '../redux/api';
 
 import '../styles/reservationForm.scss';
 
 const ReservationForm = () => {
   const navigate = useNavigate();
+  const { unitReservationId } = useParams();
   const userObject = sessionStorage.getItem('logged_user');
   const jsonObject = JSON.parse(userObject);
   const dispatch = useDispatch();
-  const [unitId, setUnitId] = useState('');
+  const [unitId, setUnitId] = useState(unitReservationId);
   const [location, setLocation] = useState('');
   const [reserveDate, setReserveDate] = useState('');
 
@@ -29,13 +30,11 @@ const ReservationForm = () => {
         user_id: jsonObject.id,
         location,
         date: reserveDate,
-      }),
+      }, navigate('/reservations')),
     );
     setUnitId('');
     setLocation('');
     setReserveDate('');
-
-    navigate('/reservations');
   };
 
   const handleUnitChange = (e) => {

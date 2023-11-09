@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import logoHouseGreen from '../../assets/logo-house-green.png';
 import './index.scss';
 
-const TopBar = ({ navRoutes }) => {
+const TopBar = ({ navRoutes, unitDisplay }) => {
   const [checked, setChecked] = React.useState(false);
 
   const onClick = () => {
@@ -26,7 +26,7 @@ const TopBar = ({ navRoutes }) => {
               <NavLink
                 onClick={onClick}
                 to={item.route}
-                className={({ isActive }) => isActive && 'active'}
+                className={classNames(({ isActive }) => isActive && 'active', { 'semi-active': unitDisplay(item.route) })}
               >
                 {item.name}
               </NavLink>
@@ -48,4 +48,5 @@ TopBar.propTypes = {
     route: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
   }]).isRequired,
+  unitDisplay: PropTypes.func.isRequired,
 };

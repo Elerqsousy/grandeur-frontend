@@ -18,11 +18,6 @@ button {
   margin: 0;
 }
 
-button {
-  color: #3992ff;
-  font-weight: 500;
-}
-
 textarea:hover,
 input:hover,
 button:hover {
@@ -77,11 +72,13 @@ button:active {
   color: #eeb004;
 }
 
-#sidebar nav a.active span {
+#sidebar nav a.active span,
+#sidebar nav a.semi-active span {
   color: inherit;
 }
 
-#sidebar nav .active i {
+#sidebar nav .active i,
+#sidebar nav .semi-active i {
   color: inherit;
 }
 
@@ -125,6 +122,11 @@ button:active {
 
 #sidebar nav a.active {
   background: #97bf0f;
+  color: white;
+}
+
+#sidebar nav a.semi-active {
+  background: #b2bf88;
   color: white;
 }
 
