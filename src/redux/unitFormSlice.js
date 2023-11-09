@@ -7,6 +7,13 @@ const initialState = {
   error: null,
 };
 
+const API_URL = () => {
+  if (process.env.NODE_ENV === 'development') {
+    return 'http://127.0.0.1:3000';
+  }
+  return 'https://grandeur-backend.onrender.com';
+};
+
 export const createUnit = createAsyncThunk(
   'unitForm/create',
   async (unitData) => {
@@ -18,7 +25,7 @@ export const createUnit = createAsyncThunk(
 
     const formData = createUnitFormData(unitData, userId);
 
-    const response = await axios.post('http://127.0.0.1:3000/units/', formData);
+    const response = await axios.post(`${API_URL()}/units/`, formData);
 
     if (response.status !== 200) {
       throw new Error('Error adding unit');

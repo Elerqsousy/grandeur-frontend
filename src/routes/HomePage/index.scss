@@ -123,6 +123,7 @@
     height: 30vh;
     width: 100%;
     border-radius: 8px;
+    overflow: hidden;
 
     .price-fixed {
       position: absolute;
@@ -137,7 +138,7 @@
 
     img {
       width: 100%;
-      height: 100%;
+      height: auto;
       float: left;
       background-size: cover;
       object-fit: cover;
