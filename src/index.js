@@ -16,6 +16,7 @@ import ProtectedRoute from './routes/ProtectedRoute';
 import UnitForm from './components/UnitForm';
 import ReservationForm from './components/ReservationForm';
 import UnitDisplayPage from './routes/UnitDisplayPage';
+import UnderConstructionPage from './components/under_construction_page';
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
       {
         path: '/book-visit/:unitReservationId',
         element: <ReservationForm />,
+      },
+      {
+        path: '/remove-unit',
+        element: <UnderConstructionPage />,
       },
     ],
   },
