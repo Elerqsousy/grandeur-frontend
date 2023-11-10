@@ -6,7 +6,7 @@ import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 import Section from '../section/index.tsx';
 
-export default function CollapsibleSection({
+const CollapsibleSection = ({
   children,
   title,
   subtitle,
@@ -22,7 +22,7 @@ export default function CollapsibleSection({
   headerClassName?: string;
   childernClassName?: string;
   isOpen?: boolean;
-}) {
+}) => {
   const [open, toggle] = React.useState(isOpen);
 
   return (
@@ -52,7 +52,9 @@ export default function CollapsibleSection({
       </div>
     </Section>
   );
-}
+};
+
+export default CollapsibleSection;
 
 CollapsibleSection.defaultProps = {
   children: '',

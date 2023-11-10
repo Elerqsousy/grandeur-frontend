@@ -30,7 +30,7 @@ const navRoutes = [
   },
 ];
 
-export default function Root() {
+const Root = () => {
   const params = useParams();
 
   const unitDisplay = (route) => {
@@ -67,4 +67,6 @@ export default function Root() {
       </div>
     </>
   );
-}
+};
+
+export default Root;
