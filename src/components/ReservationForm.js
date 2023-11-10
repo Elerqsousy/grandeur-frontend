@@ -11,7 +11,7 @@ const ReservationForm = () => {
   const userObject = sessionStorage.getItem('logged_user');
   const jsonObject = JSON.parse(userObject);
   const dispatch = useDispatch();
-  const [unitId, setUnitId] = useState(unitReservationId);
+  const [unitId, setUnitId] = useState(unitReservationId || '');
   const [location, setLocation] = useState('');
   const [reserveDate, setReserveDate] = useState('');
 

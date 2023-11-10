@@ -7,7 +7,7 @@ import UnitItem from 'components/unitItem';
 import store from '../redux/store';
 import api from '../redux/api';
 
-export default function ReservationsPage() {
+const ReservationsPage = () => {
   // eslint-disable-next-line
   const dispatch = useDispatch<typeof store.dispatch>();
 
@@ -56,4 +56,6 @@ export default function ReservationsPage() {
       </Section>
     </div>
   );
-}
+};
+
+export default ReservationsPage;
