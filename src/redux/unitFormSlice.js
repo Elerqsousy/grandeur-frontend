@@ -16,7 +16,7 @@ const API_URL = () => {
 
 export const createUnit = createAsyncThunk(
   'unitForm/create',
-  async (unitData) => {
+  async (unitData, callback) => {
     const userId = JSON.parse(sessionStorage.getItem('logged_user')).id;
 
     if (!userId) {
@@ -32,6 +32,7 @@ export const createUnit = createAsyncThunk(
     }
 
     response.data.formData = formData;
+    callback();
     return response.data;
   },
 );

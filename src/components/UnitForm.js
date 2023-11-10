@@ -30,10 +30,7 @@ const UnitForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    dispatch(createUnit(unitData))
-      .then(() => {
-        navigate('/');
-      })
+    dispatch(createUnit(unitData, navigate('/')))
       .catch((error) => {
         throw new Error('Error adding unit:', error.message);
       });
