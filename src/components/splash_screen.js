@@ -38,7 +38,7 @@ const SplashScreen = () => {
         <p className=" text text-focus-in">
           Redefining Real Estate Reservations.
         </p>
-        <div className="btn slide-in-bottom">
+        <div className="slide-in-bottom">
           <div className="splash-container">
             {showLogin && (
               <div>
